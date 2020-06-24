@@ -1,0 +1,38 @@
+GET {{level-up-host}}:33090/level-up/v1/quizzes?quizType=1
+Content-Type: application/json
+
+###
+
+
+POST {{level-up-host}}:33090/level-up/v1/usersQuiz/333
+Content-Type: application/json
+
+{
+  "quizId": "81",
+  "userID": 123456,
+  "answers": [
+    {
+      "questionId": 811,
+      "timePassedToAnswer": 5,
+      "wasAnsweredCorrectly": true
+    },
+    {
+      "questionId": 812,
+      "timePassedToAnswer": 1,
+      "wasAnsweredCorrectly": false
+    },
+    {
+      "questionId": 813,
+      "timePassedToAnswer": 15,
+      "wasAnsweredCorrectly": true
+    }
+  ]
+}
+
+###
+
+
+GET {{level-up-host}}:33090/level-up/v1/users/123456
+Content-Type: application/json
+
+###
