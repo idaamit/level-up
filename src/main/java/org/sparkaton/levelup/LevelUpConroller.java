@@ -17,6 +17,20 @@ public class LevelUpConroller {
     private final Logger logger = LoggerFactory.getLogger(LevelUpConroller.class);
 
     @ResponseStatus(HttpStatus.OK)
+    @GetMapping(value = "v1/q", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity getQuillionz() {
+        new QuillionzService().getQuestions();
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
+
+//    @ResponseStatus(HttpStatus.OK)
+//    @PostMapping(value = "v1/createquize", produces = MediaType.APPLICATION_JSON_VALUE)
+//    public ResponseEntity<Integer> createQuize() {
+//        new QuillionzService().getQuestions();
+//        return new ResponseEntity<new Integer(81)>(HttpStatus.OK);
+//    }
+
+    @ResponseStatus(HttpStatus.OK)
     @GetMapping(value = "v1/quizzes", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Quiz> getQuiz(
             @RequestParam(name = "quizType", required = true) int quizType) {
