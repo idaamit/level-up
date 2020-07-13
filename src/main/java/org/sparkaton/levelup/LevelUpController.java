@@ -9,13 +9,10 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
-import java.util.List;
-
 @RestController
 @RequestMapping("/level-up/")
-public class LevelUpConroller {
-    private final Logger logger = LoggerFactory.getLogger(LevelUpConroller.class);
+public class LevelUpController {
+    private final Logger logger = LoggerFactory.getLogger(LevelUpController.class);
     private final QuillionzService quillionzService = new QuillionzService();
     private final UserService userService = new UserService();
 
@@ -40,7 +37,7 @@ public class LevelUpConroller {
     public ResponseEntity reportUserAnswers(
             @PathVariable int userId,
             @RequestBody UserQuiz userQuiz) {
-        userService.addUserFrom(userId,userQuiz);
+        userService.addUserQuiz(userId,userQuiz);
         return new ResponseEntity(HttpStatus.OK);
     }
 

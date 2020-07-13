@@ -88,20 +88,27 @@ public class QuillionzService {
     private Quiz convertQuillionzToQuize(int quizId, Qquiz qquiz, String title) {
         int questionSequence = 1;
         List<Question> questions = new ArrayList<>();
-        for (Qmcq qmcq : qquiz.getData().getMultipleChoiceQuestions().getMcq()) {
-            int questionId = quizId * 100 + questionSequence++;
-            questions.add(createQuestionFromMcq(questionId, qmcq));
-            if (MAX_NUMBER_OF_QUESTIONS < questionSequence)
-                break;
-        }
-        for (QtrueFalsePerSentence qtrueFalsePerSentence : qquiz.getData().getMultipleChoiceQuestions().getTrueFalse()) {
-            if (MAX_NUMBER_OF_QUESTIONS < questionSequence)
-                break;
-            for (Qquestion qquestion : qtrueFalsePerSentence.getQuestionList()) {
+
+        if (qquiz.getData().getMultipleChoiceQuestions().getMcq() != null) {
+            for (Qmcq qmcq : qquiz.getData().getMultipleChoiceQuestions().getMcq()) {
                 int questionId = quizId * 100 + questionSequence++;
-                questions.add(createQuestionFromQquestion(questionId, qquestion));
+                questions.add(createQuestionFromMcq(questionId, qmcq));
                 if (MAX_NUMBER_OF_QUESTIONS < questionSequence)
                     break;
+            }
+        }
+        if (qquiz.getData().getMultipleChoiceQuestions().getTrueFalse() != null) {
+            for (QtrueFalsePerSentence qtrueFalsePerSentence : qquiz.getData().getMultipleChoiceQuestions().getTrueFalse()) {
+                if (MAX_NUMBER_OF_QUESTIONS < questionSequence)
+                    break;
+                if (qtrueFalsePerSentence.getQuestionList() != null) {
+                    for (Qquestion qquestion : qtrueFalsePerSentence.getQuestionList()) {
+                        int questionId = quizId * 100 + questionSequence++;
+                        questions.add(createQuestionFromQquestion(questionId, qquestion));
+                        if (MAX_NUMBER_OF_QUESTIONS < questionSequence)
+                            break;
+                    }
+                }
             }
         }
         return Quiz.builder().quizId(quizId)
@@ -155,7 +162,7 @@ public class QuillionzService {
                 .build();
     }
 
-    public static String RESPONSE= "{\n" +
+    public static String RESPONSE = "{\n" +
             "  \"ContentEncoding\": null,\n" +
             "  \"ContentType\": \"application/json\",\n" +
             "  \"Data\": {\n" +
@@ -343,7 +350,6 @@ public class QuillionzService {
             "  \"MaxJsonLength\": 2147483647,\n" +
             "  \"RecursionLimit\": 0\n" +
             "}";
-
 
 
     public static String RESPONSE2 = "{\n" +
