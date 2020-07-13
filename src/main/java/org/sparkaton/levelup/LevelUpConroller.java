@@ -23,12 +23,12 @@ public class LevelUpConroller {
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
-//    @ResponseStatus(HttpStatus.OK)
-//    @PostMapping(value = "v1/createquize", produces = MediaType.APPLICATION_JSON_VALUE)
-//    public ResponseEntity<Integer> createQuize() {
-//        new QuillionzService().getQuestions();
-//        return new ResponseEntity<new Integer(81)>(HttpStatus.OK);
-//    }
+    @ResponseStatus(HttpStatus.OK)
+    @PostMapping(value = "v1/createquize", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<Integer> createQuize(@RequestBody QuizRequest quizRequest) {
+        new QuillionzService().createQuiz(quizRequest);
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
 
     @ResponseStatus(HttpStatus.OK)
     @GetMapping(value = "v1/quizzes", produces = MediaType.APPLICATION_JSON_VALUE)
