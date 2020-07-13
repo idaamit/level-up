@@ -13,6 +13,5 @@ import java.util.List;
 @Builder
 public class UserQuiz {
     int quizId;
-    int userId;
     List<UserAnswer> userAnswers;
 }

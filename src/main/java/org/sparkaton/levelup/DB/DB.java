@@ -20,5 +20,7 @@ public class DB {
     public static Quiz getQuiz(int quizId) {
         return QUIZ_MAP.get(quizId);
     }
-
+    public static Quiz getLastQuiz() {
+        return QUIZ_MAP.get(QUIZ_ID.get()-1);
+    }
 }
