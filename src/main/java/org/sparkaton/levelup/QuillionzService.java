@@ -8,6 +8,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.sparkaton.levelup.dto.Answer;
 import org.sparkaton.levelup.dto.Question;
 import org.sparkaton.levelup.dto.Quiz;
+import org.sparkaton.levelup.dto.QuizRequest;
 import org.sparkaton.levelup.quillionz.QResponse;
 import org.sparkaton.levelup.quillionz.Qmcq;
 import org.sparkaton.levelup.quillionz.Qquestion;
@@ -269,4 +270,11 @@ public class QuillionzService {
             "    \"MaxJsonLength\": 2147483647,\n" +
             "    \"RecursionLimit\": 0\n" +
             "}";
+
+    public void createQuiz(QuizRequest quizRequest) {
+        String title = quizRequest.getTitle();
+        String article = quizRequest.getArticle();
+
+
+    }
 }
