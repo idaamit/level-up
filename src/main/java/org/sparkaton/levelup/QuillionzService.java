@@ -26,6 +26,7 @@ import java.util.stream.Collectors;
 @Slf4j
 public class QuillionzService {
     private static final String[] TRUE_FALSE_ANSWERS = {"True", "False"};
+    private static final int MAX_NUMBER_OF_QUESTIONS = 5;
 
     @SneakyThrows
     public Quiz createQuiz(QuizRequest quizRequest) {
@@ -90,11 +91,17 @@ public class QuillionzService {
         for (Qmcq qmcq : qquiz.getData().getMultipleChoiceQuestions().getMcq()) {
             int questionId = quizId * 100 + questionSequence++;
             questions.add(createQuestionFromMcq(questionId, qmcq));
+            if (MAX_NUMBER_OF_QUESTIONS < questionSequence)
+                break;
         }
         for (QtrueFalsePerSentence qtrueFalsePerSentence : qquiz.getData().getMultipleChoiceQuestions().getTrueFalse()) {
+            if (MAX_NUMBER_OF_QUESTIONS < questionSequence)
+                break;
             for (Qquestion qquestion : qtrueFalsePerSentence.getQuestionList()) {
                 int questionId = quizId * 100 + questionSequence++;
                 questions.add(createQuestionFromQquestion(questionId, qquestion));
+                if (MAX_NUMBER_OF_QUESTIONS < questionSequence)
+                    break;
             }
         }
         return Quiz.builder().quizId(quizId)
