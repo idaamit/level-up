@@ -8,7 +8,7 @@ import lombok.ToString;
 @ToString
 @NoArgsConstructor
 @Getter
-public class QResponse {
+public class Qquiz {
     @JsonProperty("ContentEncoding")
     String contentEncoding;
 
