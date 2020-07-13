@@ -3,27 +3,25 @@ package org.sparkaton.levelup;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
-import org.sparkaton.levelup.dto.Answer;
 import org.sparkaton.levelup.DB.DB;
+import org.sparkaton.levelup.dto.Answer;
 import org.sparkaton.levelup.dto.Question;
 import org.sparkaton.levelup.dto.Quiz;
 import org.sparkaton.levelup.dto.QuizRequest;
-import org.sparkaton.levelup.quillionz.Qquiz;
 import org.sparkaton.levelup.quillionz.Qmcq;
 import org.sparkaton.levelup.quillionz.Qquestion;
+import org.sparkaton.levelup.quillionz.Qquiz;
 import org.sparkaton.levelup.quillionz.QtrueFalsePerSentence;
 import org.sparkaton.levelup.quillionz.auth.Qauth;
 import org.springframework.http.*;
-import org.springframework.http.client.ClientHttpResponse;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.client.RestTemplate;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.io.OutputStream;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Slf4j
 public class QuillionzService {
@@ -37,7 +35,7 @@ public class QuillionzService {
         Qquiz qquiz = getQquiz(title, article);
         log.info(qquiz.toString());
         Quiz quiz = convertQuillionzToQuize(quizId, qquiz, title);
-        DB.addQuiz(quizId,quiz);
+        DB.addQuiz(quizId, quiz);
 
         return quiz;
     }
@@ -65,16 +63,17 @@ public class QuillionzService {
         ObjectMapper objectMapper = new ObjectMapper();
         return objectMapper.readValue(responseBody[0], Qquiz.class);
     }
-    public String getBearer(){
-        String secret="THdETDh4QXV0TjJyNzhoek9FZ3dTN0pYSFpVYTpLYjN6bEhqNktDNWRzcFF6cld4VlRkeFU3RHNh";
+
+    public String getBearer() {
+        String secret = "THdETDh4QXV0TjJyNzhoek9FZ3dTN0pYSFpVYTpLYjN6bEhqNktDNWRzcFF6cld4VlRkeFU3RHNh";
         RestTemplate restTemplate = new RestTemplate();
 
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_FORM_URLENCODED);
-        headers.add("Authorization","Basic "+secret);
+        headers.add("Authorization", "Basic " + secret);
 
         MultiValueMap<String, String> map = new LinkedMultiValueMap<>();
-        map.add("grant_type","client_credentials");
+        map.add("grant_type", "client_credentials");
         HttpEntity<MultiValueMap<String, String>> entity = new HttpEntity<>(map, headers);
 
         ResponseEntity<Qauth> response =
@@ -104,13 +103,14 @@ public class QuillionzService {
                 .build();
 
     }
+
     private Question createQuestionFromQquestion(int questionId, Qquestion question) {
         List<Answer> answers = new ArrayList<>();
         int correctAnswerId = 0;
         int index = 1;
         for (String answer : TRUE_FALSE_ANSWERS) {
             int answerId = questionId * 10 + index++;
-            if (answer.equals(question.getAnswer())){
+            if (answer.equals(question.getAnswer())) {
                 correctAnswerId = answerId;
             }
             answers.add(Answer.builder()
@@ -123,14 +123,18 @@ public class QuillionzService {
                 .correctAnswer(correctAnswerId)
                 .build();
     }
+
     private Question createQuestionFromMcq(int questionId, Qmcq qmcq) {
         List<Answer> answers = new ArrayList<>();
         int correctAnswerId = 0;
         List<String> options = qmcq.getOptions();
+        List<String> Shortoptions = options.stream().filter(option -> !option.equals(qmcq.getAnswer())).limit(3).collect(Collectors.toList());
+        Shortoptions.add(qmcq.getAnswer());
+        Collections.shuffle(Shortoptions);
         int index = 1;
-        for (String answer : qmcq.getOptions()) {
+        for (String answer : Shortoptions) {
             int answerId = questionId * 10 + index++;
-            if (answer.equals(qmcq.getAnswer())){
+            if (answer.equals(qmcq.getAnswer())) {
                 correctAnswerId = answerId;
             }
             answers.add(Answer.builder()
