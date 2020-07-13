@@ -17,6 +17,7 @@ import java.util.List;
 public class LevelUpConroller {
     private final Logger logger = LoggerFactory.getLogger(LevelUpConroller.class);
     private final QuillionzService quillionzService = new QuillionzService();
+    private final UserService userService = new UserService();
 
     @ResponseStatus(HttpStatus.OK)
     @PostMapping(value = "v1/createquiz", produces = MediaType.APPLICATION_JSON_VALUE)
@@ -39,7 +40,7 @@ public class LevelUpConroller {
     public ResponseEntity reportUserAnswers(
             @PathVariable int userId,
             @RequestBody UserQuiz userQuiz) {
-        System.out.println("userId=" + userId);
+        userService.addUserFrom(userId,userQuiz);
         return new ResponseEntity(HttpStatus.OK);
     }
 

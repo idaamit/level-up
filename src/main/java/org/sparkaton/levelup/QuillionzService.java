@@ -155,7 +155,198 @@ public class QuillionzService {
                 .build();
     }
 
-    public static String RESPONSE = "{\n" +
+    public static String RESPONSE= "{\n" +
+            "  \"ContentEncoding\": null,\n" +
+            "  \"ContentType\": \"application/json\",\n" +
+            "  \"Data\": {\n" +
+            "    \"multipleChoiceQuestions\": {\n" +
+            "      \"trueFalse\": [\n" +
+            "        {\n" +
+            "          \"questionList\": [\n" +
+            "            {\n" +
+            "              \"question\": \"If the X% is programmed for \\\"reinforcement learning\\\", goals can be implicitly induced by rewarding some types of behavior or punishing others.\",\n" +
+            "              \"answer\": \"False\",\n" +
+            "              \"correctSent\": \"If the AI is programmed for \\\"reinforcement learning\\\", goals can be implicitly induced by rewarding some types of behavior or punishing others.\"\n" +
+            "            },\n" +
+            "            {\n" +
+            "              \"question\": \"If the AI is programmed for \\\"reinforcement learning\\\", goals can be implicitly induced by rewarding some types of behavior or punishing others.\",\n" +
+            "              \"answer\": \"True\",\n" +
+            "              \"correctSent\": \"If the AI is programmed for \\\"reinforcement learning\\\", goals can be implicitly induced by rewarding some types of behavior or punishing others.\"\n" +
+            "            }\n" +
+            "          ],\n" +
+            "          \"originalSentence\": \"If the AI is programmed for \\\"reinforcement learning\\\", goals can be implicitly induced by rewarding some types of behavior or punishing others.\"\n" +
+            "        },\n" +
+            "        {\n" +
+            "          \"questionList\": [\n" +
+            "            {\n" +
+            "              \"question\": \"If the AI is programmed for \\\"reinforcement learning\\\", goals can be implicitly induced by rewarding some types of behavior or punishing others. Alternatively, an evolutionary system can induce goals by using a \\\"fitness function\\\" to mutate and preferentially replicate high-scoring Y% systems, similar to how animals evolved to innately desire certain goals such as finding food.\",\n" +
+            "              \"answer\": \"False\",\n" +
+            "              \"correctSent\": \"Alternatively, an evolutionary system can induce goals by using a \\\"fitness function\\\" to mutate and preferentially replicate high-scoring AI systems, similar to how animals evolved to innately desire certain goals such as finding food.\"\n" +
+            "            },\n" +
+            "            {\n" +
+            "              \"question\": \"If the AI is programmed for \\\"reinforcement learning\\\", goals can be implicitly induced by rewarding some types of behavior or punishing others. Alternatively, an evolutionary system can induce goals by using a \\\"fitness function\\\" to mutate and preferentially replicate high-scoring AI systems, similar to how animals evolved to innately desire certain goals such as finding food.\",\n" +
+            "              \"answer\": \"True\",\n" +
+            "              \"correctSent\": \"Alternatively, an evolutionary system can induce goals by using a \\\"fitness function\\\" to mutate and preferentially replicate high-scoring AI systems, similar to how animals evolved to innately desire certain goals such as finding food.\"\n" +
+            "            }\n" +
+            "          ],\n" +
+            "          \"originalSentence\": \"Alternatively, an evolutionary system can induce goals by using a \\\"fitness function\\\" to mutate and preferentially replicate high-scoring AI systems, similar to how animals evolved to innately desire certain goals such as finding food.\"\n" +
+            "        },\n" +
+            "        {\n" +
+            "          \"questionList\": [\n" +
+            "            {\n" +
+            "              \"question\": \"Some X% systems, such as nearest-neighbor, instead of reason by analogy, the systems are not generally given goals, except to the degree that goals are implicit in their training data.\",\n" +
+            "              \"answer\": \"False\",\n" +
+            "              \"correctSent\": \"Some AI systems, such as nearest-neighbor, instead of reason by analogy, these systems are not generally given goals, except to the degree that goals are implicit in their training data.\"\n" +
+            "            },\n" +
+            "            {\n" +
+            "              \"question\": \"Some AI systems, such as nearest-neighbor, instead of reason by analogy, the systems are not generally given goals, except to the degree that goals are implicit in their training data.\",\n" +
+            "              \"answer\": \"True\",\n" +
+            "              \"correctSent\": \"Some AI systems, such as nearest-neighbor, instead of reason by analogy, these systems are not generally given goals, except to the degree that goals are implicit in their training data.\"\n" +
+            "            }\n" +
+            "          ],\n" +
+            "          \"originalSentence\": \"Some AI systems, such as nearest-neighbor, instead of reason by analogy, these systems are not generally given goals, except to the degree that goals are implicit in their training data.\"\n" +
+            "        },\n" +
+            "        {\n" +
+            "          \"questionList\": [\n" +
+            "            {\n" +
+            "              \"question\": \"Y% often revolves around the use of algorithms.\",\n" +
+            "              \"answer\": \"False\",\n" +
+            "              \"correctSent\": \"AI often revolves around the use of algorithms.\"\n" +
+            "            },\n" +
+            "            {\n" +
+            "              \"question\": \"AI often revolves around the use of algorithms.\",\n" +
+            "              \"answer\": \"True\",\n" +
+            "              \"correctSent\": \"AI often revolves around the use of algorithms.\"\n" +
+            "            }\n" +
+            "          ],\n" +
+            "          \"originalSentence\": \"AI often revolves around the use of algorithms.\"\n" +
+            "        },\n" +
+            "        {\n" +
+            "          \"questionList\": [\n" +
+            "            {\n" +
+            "              \"question\": \"Many AI algorithms are capable of learning from data; they can enhance themselves by learning new heuristics , or can themselves write other algorithms.\",\n" +
+            "              \"answer\": \"True\",\n" +
+            "              \"correctSent\": \"Many AI algorithms are capable of learning from data; they can enhance themselves by learning new heuristics , or can themselves write other algorithms.\"\n" +
+            "            },\n" +
+            "            {\n" +
+            "              \"question\": \"Many X% algorithms are capable of learning from data; they can enhance themselves by learning new heuristics , or can themselves write other algorithms.\",\n" +
+            "              \"answer\": \"False\",\n" +
+            "              \"correctSent\": \"Many AI algorithms are capable of learning from data; they can enhance themselves by learning new heuristics , or can themselves write other algorithms.\"\n" +
+            "            }\n" +
+            "          ],\n" +
+            "          \"originalSentence\": \"Many AI algorithms are capable of learning from data; they can enhance themselves by learning new heuristics , or can themselves write other algorithms.\"\n" +
+            "        },\n" +
+            "        {\n" +
+            "          \"questionList\": [\n" +
+            "            {\n" +
+            "              \"question\": \"In practice, it is frequent possible to consider every possibility, because of the phenomenon of \\\"combinatorial explosion\\\", where the time needed to solve a problem grows exponentially.\",\n" +
+            "              \"answer\": \"False\",\n" +
+            "              \"correctSent\": \"In practice, it is seldom possible to consider every possibility, because of the phenomenon of \\\"combinatorial explosion\\\", where the time needed to solve a problem grows exponentially.\"\n" +
+            "            },\n" +
+            "            {\n" +
+            "              \"question\": \"In practice, it is seldom possible to consider every possibility, because of the phenomenon of \\\"combinatorial explosion\\\", where the time needed to solve a problem grows exponentially.\",\n" +
+            "              \"answer\": \"True\",\n" +
+            "              \"correctSent\": \"In practice, it is seldom possible to consider every possibility, because of the phenomenon of \\\"combinatorial explosion\\\", where the time needed to solve a problem grows exponentially.\"\n" +
+            "            }\n" +
+            "          ],\n" +
+            "          \"originalSentence\": \"In practice, it is seldom possible to consider every possibility, because of the phenomenon of \\\"combinatorial explosion\\\", where the time needed to solve a problem grows exponentially.\"\n" +
+            "        },\n" +
+            "        {\n" +
+            "          \"questionList\": [\n" +
+            "            {\n" +
+            "              \"question\": \"Much of AI research involves figuring out how to identify and avoid considering a broad range of possibilities unlikely to be beneficial.\",\n" +
+            "              \"answer\": \"True\",\n" +
+            "              \"correctSent\": \"Much of AI research involves figuring out how to identify and avoid considering a broad range of possibilities unlikely to be beneficial.\"\n" +
+            "            },\n" +
+            "            {\n" +
+            "              \"question\": \"Much of AI research involves figuring out how to identify and avoid considering a broad range of possibilities likely to be beneficial.\",\n" +
+            "              \"answer\": \"False\",\n" +
+            "              \"correctSent\": \"Much of AI research involves figuring out how to identify and avoid considering a broad range of possibilities unlikely to be beneficial.\"\n" +
+            "            }\n" +
+            "          ],\n" +
+            "          \"originalSentence\": \"Much of AI research involves figuring out how to identify and avoid considering a broad range of possibilities unlikely to be beneficial.\"\n" +
+            "        },\n" +
+            "        {\n" +
+            "          \"questionList\": [\n" +
+            "            {\n" +
+            "              \"question\": \"Much of AI research involves figuring out how to identify and avoid considering a broad range of possibilities unlikely to be beneficial. For example, when viewing a map and looking for the shortest driving route from Denver to New York in the East, one can in most cases skip looking at any path through San Francisco or other areas far to the West; thus, an AI wielding a pathfinding algorithm like A* can avoid the combinatorial explosion that would ensue if every possible route had to be ponderously considered.\",\n" +
+            "              \"answer\": \"True\",\n" +
+            "              \"correctSent\": \"For example, when viewing a map and looking for the shortest driving route from Denver to New York in the East, one can in most cases skip looking at any path through San Francisco or other areas far to the West; thus, an AI wielding a pathfinding algorithm like A* can avoid the combinatorial explosion that would ensue if every possible route had to be ponderously considered.\"\n" +
+            "            },\n" +
+            "            {\n" +
+            "              \"question\": \"Much of AI research involves figuring out how to identify and avoid considering a broad range of possibilities unlikely to be beneficial. For example, when viewing a map and looking for the shortest driving route from Denver to New York in the East, one can in most cases skip looking at any path through San Diego or other areas far to the West; thus, an AI wielding a pathfinding algorithm like A* can avoid the combinatorial explosion that would ensue if every possible route had to be ponderously considered.\",\n" +
+            "              \"answer\": \"False\",\n" +
+            "              \"correctSent\": \"For example, when viewing a map and looking for the shortest driving route from Denver to New York in the East, one can in most cases skip looking at any path through San Francisco or other areas far to the West; thus, an AI wielding a pathfinding algorithm like A* can avoid the combinatorial explosion that would ensue if every possible route had to be ponderously considered.\"\n" +
+            "            },\n" +
+            "            {\n" +
+            "              \"question\": \"Much of AI research involves figuring out how to identify and avoid considering a broad range of possibilities unlikely to be beneficial. For example, when viewing a map and looking for the shortest driving route from Tampa to New York in the East, one can in most cases skip looking at any path through San Francisco or other areas far to the West; thus, an AI wielding a pathfinding algorithm like A* can avoid the combinatorial explosion that would ensue if every possible route had to be ponderously considered.\",\n" +
+            "              \"answer\": \"False\",\n" +
+            "              \"correctSent\": \"For example, when viewing a map and looking for the shortest driving route from Denver to New York in the East, one can in most cases skip looking at any path through San Francisco or other areas far to the West; thus, an AI wielding a pathfinding algorithm like A* can avoid the combinatorial explosion that would ensue if every possible route had to be ponderously considered.\"\n" +
+            "            }\n" +
+            "          ],\n" +
+            "          \"originalSentence\": \"For example, when viewing a map and looking for the shortest driving route from Denver to New York in the East, one can in most cases skip looking at any path through San Francisco or other areas far to the West; thus, an AI wielding a pathfinding algorithm like A* can avoid the combinatorial explosion that would ensue if every possible route had to be ponderously considered.\"\n" +
+            "        },\n" +
+            "        {\n" +
+            "          \"questionList\": [\n" +
+            "            {\n" +
+            "              \"question\": \"These inferences can be obvious, such as \\\"since the sun rose every morning for the last 10,000 days, it will probably rise tomorrow morning as well\\\". They can be nuanced, such as \\\"X% of families have geographically separate species with color variants, so there is a AI chance that undiscovered black swans exist\\\".\",\n" +
+            "              \"answer\": \"False\",\n" +
+            "              \"correctSent\": \"They can be nuanced, such as \\\"X% of families have geographically separate species with color variants, so there is a Y% chance that undiscovered black swans exist\\\".\"\n" +
+            "            },\n" +
+            "            {\n" +
+            "              \"question\": \"These inferences can be obvious, such as \\\"since the sun rose every morning for the last 10,000 days, it will probably rise tomorrow morning as well\\\". They can be nuanced, such as \\\"AI of families have geographically separate species with color variants, so there is a Y% chance that undiscovered black swans exist\\\".\",\n" +
+            "              \"answer\": \"False\",\n" +
+            "              \"correctSent\": \"They can be nuanced, such as \\\"X% of families have geographically separate species with color variants, so there is a Y% chance that undiscovered black swans exist\\\".\"\n" +
+            "            },\n" +
+            "            {\n" +
+            "              \"question\": \"These inferences can be obvious, such as \\\"since the sun rose every morning for the last 10,000 days, it will probably rise tomorrow morning as well\\\". They can be nuanced, such as \\\"X% of families have geographically separate species with color variants, so there is a Y% chance that undiscovered black swans exist\\\".\",\n" +
+            "              \"answer\": \"True\",\n" +
+            "              \"correctSent\": \"They can be nuanced, such as \\\"X% of families have geographically separate species with color variants, so there is a Y% chance that undiscovered black swans exist\\\".\"\n" +
+            "            }\n" +
+            "          ],\n" +
+            "          \"originalSentence\": \"They can be nuanced, such as \\\"X% of families have geographically separate species with color variants, so there is a Y% chance that undiscovered black swans exist\\\".\"\n" +
+            "        },\n" +
+            "        {\n" +
+            "          \"questionList\": [\n" +
+            "            {\n" +
+            "              \"question\": \"Settling on a bad, overly complex theory gerrymandered to fit all the past training data is known as overfitting. A toy example is that an image classifier trained only on pictures of brown horses and black cats might conclude that all brown patches are unlikely to be horses.\",\n" +
+            "              \"answer\": \"False\",\n" +
+            "              \"correctSent\": \"A toy example is that an image classifier trained only on pictures of brown horses and black cats might conclude that all brown patches are likely to be horses.\"\n" +
+            "            },\n" +
+            "            {\n" +
+            "              \"question\": \"Settling on a bad, overly complex theory gerrymandered to fit all the past training data is known as overfitting. A toy example is that an image classifier trained only on pictures of brown horses and black cats might conclude that all brown patches are likely to be horses.\",\n" +
+            "              \"answer\": \"True\",\n" +
+            "              \"correctSent\": \"A toy example is that an image classifier trained only on pictures of brown horses and black cats might conclude that all brown patches are likely to be horses.\"\n" +
+            "            }\n" +
+            "          ],\n" +
+            "          \"originalSentence\": \"A toy example is that an image classifier trained only on pictures of brown horses and black cats might conclude that all brown patches are likely to be horses.\"\n" +
+            "        },\n" +
+            "        {\n" +
+            "          \"questionList\": [\n" +
+            "            {\n" +
+            "              \"question\": \"A real-world example is that, unlike humans, current image classifiers don't determine the spatial relationship between components of the picture; instead, they learn abstract patterns of pixels that humans are oblivious to, but that linearly correlate with images of certain types of real objects. A self-driving car system may use a neural network to determine which parts of the picture seem to match previous training images of pedestrians, and then model those areas as slow-moving but somewhat unpredictable rectangular prisms that must be avoided.\",\n" +
+            "              \"answer\": \"True\",\n" +
+            "              \"correctSent\": \"A self-driving car system may use a neural network to determine which parts of the picture seem to match previous training images of pedestrians, and then model those areas as slow-moving but somewhat unpredictable rectangular prisms that must be avoided.\"\n" +
+            "            },\n" +
+            "            {\n" +
+            "              \"question\": \"A real-world example is that, unlike humans, current image classifiers don't determine the spatial relationship between components of the picture; instead, they learn abstract patterns of pixels that humans are oblivious to, but that linearly correlate with images of certain types of real objects. A self-driving car system may use a neural network to determine which parts of the picture seem to match previous training images of pedestrians, and then model those areas as rapid-moving but somewhat unpredictable rectangular prisms that must be avoided.\",\n" +
+            "              \"answer\": \"False\",\n" +
+            "              \"correctSent\": \"A self-driving car system may use a neural network to determine which parts of the picture seem to match previous training images of pedestrians, and then model those areas as slow-moving but somewhat unpredictable rectangular prisms that must be avoided.\"\n" +
+            "            }\n" +
+            "          ],\n" +
+            "          \"originalSentence\": \"A self-driving car system may use a neural network to determine which parts of the picture seem to match previous training images of pedestrians, and then model those areas as slow-moving but somewhat unpredictable rectangular prisms that must be avoided.\"\n" +
+            "        }\n" +
+            "      ]\n" +
+            "    }\n" +
+            "  },\n" +
+            "  \"JsonRequestBehavior\": 0,\n" +
+            "  \"MaxJsonLength\": 2147483647,\n" +
+            "  \"RecursionLimit\": 0\n" +
+            "}";
+
+
+
+    public static String RESPONSE2 = "{\n" +
             "    \"ContentEncoding\": null,\n" +
             "    \"ContentType\": \"application/json\",\n" +
             "    \"Data\": {\n" +

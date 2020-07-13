@@ -1,6 +1,6 @@
 POST https://app.quillionz.com:8243/token
 Content-Type: application/x-www-form-urlencoded
-Authorization: Basic MFBkWFNXSFVTRlRjSWZZemNQX2Y4cXhfRHZVYTo5MDg1MjZQTGtSSTNDdDNoalZyQ2lBeU53aUFh
+Authorization: Basic THdETDh4QXV0TjJyNzhoek9FZ3dTN0pYSFpVYTpLYjN6bEhqNktDNWRzcFF6cld4VlRkeFU3RHNh
 
 grant_type=client_credentials
 
