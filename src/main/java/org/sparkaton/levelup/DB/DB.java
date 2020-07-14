@@ -37,4 +37,7 @@ public class DB {
         }
         USER_QUIZ_MAP.get(userId).put(quizId,userQuiz);
     }
+    public static Map<Integer, UserQuiz> getUserQuiz(int userId) {
+        return USER_QUIZ_MAP.get(userId);
+    }
 }

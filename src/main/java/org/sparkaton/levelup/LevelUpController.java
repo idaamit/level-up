@@ -27,34 +27,22 @@ public class LevelUpController {
     @GetMapping(value = "v1/quiz", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Quiz> getQuiz() {
         Quiz quiz = DB.getLastQuiz();
-        return new ResponseEntity<Quiz>(
-                quiz,
-                HttpStatus.OK);
+        return new ResponseEntity<Quiz>(quiz, HttpStatus.OK);
     }
 
     @ResponseStatus(HttpStatus.OK)
     @PostMapping(value = "v1/usersQuiz/{userId}", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity reportUserAnswers(
-            @PathVariable int userId,
-            @RequestBody UserQuiz userQuiz) {
-        userService.addUserQuiz(userId,userQuiz);
+    public ResponseEntity reportUserAnswers(@PathVariable int userId, @RequestBody UserQuiz userQuiz) {
+        userService.addUserQuiz(userId, userQuiz);
         return new ResponseEntity(HttpStatus.OK);
     }
 
 
     @ResponseStatus(HttpStatus.OK)
     @GetMapping(value = "v1/users/{userId}", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<UserStatistics> getUserStatistics(
-            @PathVariable int userId) {
-        System.out.println("userId=" + userId);
-        return new ResponseEntity<UserStatistics>(
-                UserStatistics.builder().userId(userId)
-                        .points(856)
-                        .numberOfAnsweredQuizes(3)
-                        .totalNumberOfCorrectAnswers(13)
-                        .totalNumberOfWrongAnswers(4)
-                        .build(),
-                HttpStatus.OK);
+    public ResponseEntity<UserStatistics> getUserStatistics(@PathVariable int userId) {
+        UserStatistics userStatistics = userService.getUserStatistics(userId);
+        return new ResponseEntity<>(userStatistics, HttpStatus.OK);
     }
 
 }

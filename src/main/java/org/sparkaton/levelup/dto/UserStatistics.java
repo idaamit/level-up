@@ -13,7 +13,7 @@ import lombok.Setter;
 public class UserStatistics {
     int userId;
     int points;
-    int numberOfAnsweredQuizes;
+    int numberOfAnsweredQuizzes;
     int totalNumberOfCorrectAnswers;
     int totalNumberOfWrongAnswers;
 }
