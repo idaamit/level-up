@@ -3,9 +3,12 @@ package org.sparkaton.levelup.DB;
 import org.sparkaton.levelup.dto.Quiz;
 import org.sparkaton.levelup.dto.UserQuiz;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
+import java.util.stream.Stream;
 
 public class DB {
 
@@ -24,6 +27,9 @@ public class DB {
     }
     public static Quiz getLastQuiz() {
         return QUIZ_MAP.get(QUIZ_ID.get()-1);
+    }
+    public static List<Quiz> getAllQuizzes() {
+        return new ArrayList<>(QUIZ_MAP.values());
     }
 
 

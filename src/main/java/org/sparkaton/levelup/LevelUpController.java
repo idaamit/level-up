@@ -9,6 +9,8 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/level-up/")
 public class LevelUpController {
@@ -28,6 +30,13 @@ public class LevelUpController {
     public ResponseEntity<Quiz> getQuiz() {
         Quiz quiz = DB.getLastQuiz();
         return new ResponseEntity<Quiz>(quiz, HttpStatus.OK);
+    }
+
+    @ResponseStatus(HttpStatus.OK)
+    @GetMapping(value = "v1/quizzes", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<List<Quiz>> getQuizzes() {
+        List<Quiz> allQuizzes = DB.getAllQuizzes();
+        return new ResponseEntity<List<Quiz>>(allQuizzes, HttpStatus.OK);
     }
 
     @ResponseStatus(HttpStatus.OK)
