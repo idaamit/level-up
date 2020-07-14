@@ -1,5 +1,6 @@
 package org.sparkaton.levelup;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
@@ -14,10 +15,14 @@ import org.sparkaton.levelup.quillionz.Qquiz;
 import org.sparkaton.levelup.quillionz.QtrueFalsePerSentence;
 import org.sparkaton.levelup.quillionz.auth.Qauth;
 import org.springframework.http.*;
+import org.springframework.http.client.ClientHttpResponse;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.client.RestTemplate;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -27,6 +32,20 @@ import java.util.stream.Collectors;
 public class QuillionzService {
     private static final String[] TRUE_FALSE_ANSWERS = {"True", "False"};
     private static final int MAX_NUMBER_OF_QUESTIONS = 5;
+
+
+    public QuillionzService() {
+        createDefaultQuiz();
+    }
+
+    @SneakyThrows
+    private void createDefaultQuiz() {
+        int quizId = DB.getQuizID();
+        ObjectMapper objectMapper = new ObjectMapper();
+        Qquiz qquiz = objectMapper.readValue(RESPONSE, Qquiz.class);
+        Quiz quiz = convertQuillionzToQuize(quizId, qquiz, "AI-Basics");
+        DB.addQuiz(quizId, quiz);
+    }
 
     @SneakyThrows
     public Quiz createQuiz(QuizRequest quizRequest) {
@@ -46,21 +65,21 @@ public class QuillionzService {
         String parsedTitle = title.replace(" ", "%20");
         RestTemplate restTemplate = new RestTemplate();
         String url = "https://app.quillionz.com:8243/quillionzapifree/1.0.0/API/SubmitContent_GetQuestions?shortAnswer=false&recall=false&mcq=true&whQuestions=false&title=" + parsedTitle;
-//        String bearer = getBearer();
-//        ClientHttpResponse clientHttpResponse = restTemplate.execute(url, HttpMethod.POST, httpRequest -> {
-//            HttpHeaders headers = httpRequest.getHeaders();
-//            headers.add("Authorization", "Bearer " + bearer);
-//            headers.add("Content-Type", "text/plain");
-//            headers.add("Accept", "*/*");
-//            OutputStream httpRequestBody = httpRequest.getBody();
-//            httpRequestBody.write(article.getBytes());
-//        }, httpResponse -> {
-//            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(httpResponse.getBody()));
-//            responseBody[0] = bufferedReader.readLine();
-//            log.info(responseBody[0]);
-//            return httpResponse;
-//        });
-        responseBody[0] = RESPONSE;
+        String bearer = getBearer();
+        ClientHttpResponse clientHttpResponse = restTemplate.execute(url, HttpMethod.POST, httpRequest -> {
+            HttpHeaders headers = httpRequest.getHeaders();
+            headers.add("Authorization", "Bearer " + bearer);
+            headers.add("Content-Type", "text/plain");
+            headers.add("Accept", "*/*");
+            OutputStream httpRequestBody = httpRequest.getBody();
+            httpRequestBody.write(article.getBytes());
+        }, httpResponse -> {
+            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(httpResponse.getBody()));
+            responseBody[0] = bufferedReader.readLine();
+            log.info(responseBody[0]);
+            return httpResponse;
+        });
+//        responseBody[0] = RESPONSE;
         ObjectMapper objectMapper = new ObjectMapper();
         return objectMapper.readValue(responseBody[0], Qquiz.class);
     }

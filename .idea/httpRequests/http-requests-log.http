@@ -1,3 +1,72 @@
+POST https://app.quillionz.com:8243/quillionzapifree/1.0.0/API/SubmitContent_GetQuestions?shortAnswer=false&recall=false&mcq=true&whQuestions=false&title=Roman history
+Content-Type: text/plain
+Accept: */*
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ik5UWmhOMkZpT1dVME1UWXhOalE0TkdFMFptRmxNVFV3TmpneVlqVXpNekUwWlRFMll6UTROZz09In0.eyJzdWIiOiJsZXZlbFVwQGNhcmJvbi5zdXBlciIsImJhY2tlbmRKd3QiOiJleUowZVhBaU9pSktWMVFpTENKaGJHY2lPaUpTVXpJMU5pSXNJbmcxZENJNklrNVVXbWhPTWtacFQxZFZNRTFVV1hoT2FsRTBUa2RGTUZwdFJteE5WRlYzVG1wbmVWbHFWWHBOZWtVd1dsUkZNbGw2VVRST1p6MDlJbjA9LmV5Sm9kSFJ3T2x3dlhDOTNjMjh5TG05eVoxd3ZZMnhoYVcxelhDOWhjSEJzYVdOaGRHbHZiblJwWlhJaU9pSlZibXhwYldsMFpXUWlMQ0pvZEhSd09sd3ZYQzkzYzI4eUxtOXlaMXd2WTJ4aGFXMXpYQzl6ZFdKelkzSnBZbVZ5SWpvaWJHVjJaV3hWY0NJc0ltaDBkSEE2WEM5Y0wzZHpiekl1YjNKblhDOWpiR0ZwYlhOY0wydGxlWFI1Y0dVaU9pSlFVazlFVlVOVVNVOU9JaXdpYVhOeklqb2lkM052TWk1dmNtZGNMM0J5YjJSMVkzUnpYQzloYlNJc0ltaDBkSEE2WEM5Y0wzZHpiekl1YjNKblhDOWpiR0ZwYlhOY0wyRndjR3hwWTJGMGFXOXVibUZ0WlNJNklteGxkbVZzVlhBaUxDSm9kSFJ3T2x3dlhDOTNjMjh5TG05eVoxd3ZZMnhoYVcxelhDOWxibVIxYzJWeUlqb2liR1YyWld4VmNFQmpZWEppYjI0dWMzVndaWElpTENKb2RIUndPbHd2WEM5M2MyOHlMbTl5WjF3dlkyeGhhVzF6WEM5bGJtUjFjMlZ5VkdWdVlXNTBTV1FpT2lJdE1USXpOQ0lzSW1WNGNDSTZNVFU1TkRjeE1UazNPU3dpYUhSMGNEcGNMMXd2ZDNOdk1pNXZjbWRjTDJOc1lXbHRjMXd2WVhCd2JHbGpZWFJwYjI1cFpDSTZJak15TkNJc0ltaDBkSEE2WEM5Y0wzZHpiekl1YjNKblhDOWpiR0ZwYlhOY0wyRndjR3hwWTJGMGFXOXVWVlZKWkNJNklqbGpaakk1TlRZeExUTTNZbVV0TkdRNU15MWhOVGxqTFdVeE9XRTVabUkzWlRneVlpSjkua2huUEc2aHJpWDd3VjVjdF9BM3NUNVBlTDJQdGY4UUc5SlhUMl9hUi1peDNUUzNCUV83eGpFTnFPQmZVZDE4dXFMZnFobnBfX1BBQnBzRUh0WS13QXBFdWRQaEt6QnBnMXc5TERqYTUzUlkyNzE2STlvWDUwTklRRUFWbVVRZkFqaDJJQzZ4LXJsX1BlVkRwbTV0RktlT0ZEdlhDblNBQUFsR1FNeHl0ZWR5c3FNQktpYXp3bktHeTNWeDZoVW16S2hrN25aU0drMlpsbTNrUVc5ZnJMdzlpQktVSXBCVEQ2ZVRVczEzeHJoTFQ0YmYyV21GakRfNEpHUEZPd210d21LSU1kUXZ4d054S0V4c1NtUWF3aGJHbktsZmNaZndxbUF3VWw3Q0hHSC1ZYWxaay1RSjl6clh3ZzVMRmxKV1NyazVsWGNsZlJNYnloMy02cjR0OXJ3PT0iLCJpc3MiOiJodHRwczpcL1wvYXBwLnF1aWxsaW9uei5jb206OTQ0M1wvb2F1dGgyXC90b2tlbiIsInRpZXJJbmZvIjp7IkZyZWVUaWVyIjp7InN0b3BPblF1b3RhUmVhY2giOnRydWUsInNwaWtlQXJyZXN0TGltaXQiOjIsInNwaWtlQXJyZXN0VW5pdCI6Im1pbiJ9fSwia2V5dHlwZSI6IlBST0RVQ1RJT04iLCJzdWJzY3JpYmVkQVBJcyI6W3sic3Vic2NyaWJlclRlbmFudERvbWFpbiI6ImNhcmJvbi5zdXBlciIsIm5hbWUiOiJRdWlsbGlvbnpBUEktRnJlZSIsImNvbnRleHQiOiJcL3F1aWxsaW9uemFwaWZyZWVcLzEuMC4wIiwicHVibGlzaGVyIjoiYWRtaW4iLCJ2ZXJzaW9uIjoiMS4wLjAiLCJzdWJzY3JpcHRpb25UaWVyIjoiRnJlZVRpZXIifV0sImF1ZCI6Imh0dHA6XC9cL29yZy53c28yLmFwaW1ndFwvZ2F0ZXdheSIsImFwcGxpY2F0aW9uIjp7Im93bmVyIjoibGV2ZWxVcCIsInRpZXIiOiJVbmxpbWl0ZWQiLCJuYW1lIjoibGV2ZWxVcCIsImlkIjozMjQsInV1aWQiOm51bGx9LCJzY29wZSI6ImFtX2FwcGxpY2F0aW9uX3Njb3BlIGRlZmF1bHQiLCJjb25zdW1lcktleSI6Ikx3REw4eEF1dE4ycjc4aHpPRWd3UzdKWEhaVWEiLCJleHAiOjE1OTQ3MTQ2NzksImlhdCI6MTU5NDcxMTA3OSwianRpIjoiYThjYWZlMDMtNDM1MC00NTNlLWI3NzItOGE0MTUxM2NlN2Y0In0.F1VSnRTws4CQ2OTp3zkiqyGfcaooNCuIKH4MldKva-UQWV4UfISYBkTmZZLBqjpzCDReFQUNA8k_XnYf8L8IHs6UjhZhCQqT31N65jSiqEObLiIzgB_88yvsP5W-mZ16GpTjYhQ5iiJArFvz76RF8t-ugqp2s0ttTAaAytH6bfn0cQAHp6qNKIqYLl2X8hr3vv8h5hAvFRwA2VEbp0kO6x5iHkRbzTFYDXM0MiDlrzAMXkpmKJnvajKWCeMzYX4pI4L3NsXaBGSKHXhrF3Wipub-2CGxf6HAa4hCWMMKxLuQAEILFguw9mztibO4Upqgnnjpvg1xpqbWp4N2X6lyuQ
+
+Python is an interpreted, high-level, general-purpose programming language. Created by Guido van Rossum and first released in 1991, Python's design philosophy emphasizes code readability with its notable use of significant whitespace. Its language constructs and object-oriented approach aim to help programmers write clear, logical code for small and large-scale projects.[28]
+
+Python is dynamically typed and garbage-collected. It supports multiple programming paradigms, including structured (particularly, procedural), object-oriented, and functional programming. Python is often described as a "batteries included" language due to its comprehensive standard library.[29]
+
+Python was conceived in the late 1980s as a successor to the ABC language. Python 2.0, released in 2000, introduced features like list comprehensions and a garbage collection system with reference counting.
+
+Python 3.0, released in 2008, was a major revision of the language that is not completely backward-compatible, and much Python 2 code does not run unmodified on Python 3.
+
+The Python 2 language was officially discontinued in 2020 (first planned for 2015), and "Python 2.7.18 is the last Python 2.7 release and therefore the last Python 2 release."[30] No more security patches or other improvements will be released for it.[31][32] With Python 2's end-of-life, only Python 3.5.x[33] and later are supported.
+
+Python interpreters are available for many operating systems. A global community of programmers develops and maintains CPython, an open source[34] reference implementation. A non-profit organization, the Python Software Foundation, manages and directs resources for Python and CPython development.
+
+History
+
+Guido van Rossum at OSCON 2006
+Main article: History of Python
+Python was conceived in the late 1980s[35] by Guido van Rossum at Centrum Wiskunde & Informatica (CWI) in the Netherlands as a successor to the ABC language (itself inspired by SETL),[36] capable of exception handling and interfacing with the Amoeba operating system.[8] Its implementation began in December 1989.[37] Van Rossum shouldered sole responsibility for the project, as the lead developer, until 12 July 2018, when he announced his "permanent vacation" from his responsibilities as Python's Benevolent Dictator For Life, a title the Python community bestowed upon him to reflect his long-term commitment as the project's chief decision-maker.[38] He now shares his leadership as a member of a five-person steering council.[39][40][41] In January 2019, active Python core developers elected Brett Cannon, Nick Coghlan, Barry Warsaw, Carol Willing and Van Rossum to a five-member "Steering Council" to lead the project.[42]
+
+Python 2.0 was released on 16 October 2000 with many major new features, including a cycle-detecting garbage collector and support for Unicode.[43]
+
+Python 3.0 was released on 3 December 2008. It was a major revision of the language that is not completely backward-compatible.[44] Many of its major features were backported to Python 2.6.x[45] and 2.7.x version series. Releases of Python 3 include the 2to3 utility, which automates (at least partially) the translation of Python 2 code to Python 3.[46]
+
+Python 2.7's end-of-life date was initially set at 2015 then postponed to 2020 out of concern that a large body of existing code could not easily be forward-ported to Python 3.[47][48]
+
+Features and philosophy
+Python is a multi-paradigm programming language. Object-oriented programming and structured programming are fully supported, and many of its features support functional programming and aspect-oriented programming (including by metaprogramming[49] and metaobjects (magic methods)).[50] Many other paradigms are supported via extensions, including design by contract[51][52] and logic programming.[53]
+
+Python uses dynamic typing and a combination of reference counting and a cycle-detecting garbage collector for memory management.[54] It also features dynamic name resolution (late binding), which binds method and variable names during program execution.
+
+Python's design offers some support for functional programming in the Lisp tradition. It has filter, map, and reduce functions; list comprehensions, dictionaries, sets, and generator expressions.[55] The standard library has two modules (itertools and functools) that implement functional tools borrowed from Haskell and Standard ML.[56]
+
+The language's core philosophy is summarized in the document The Zen of Python (PEP 20), which includes aphorisms such as:[57]
+
+Beautiful is better than ugly.
+Explicit is better than implicit.
+Simple is better than complex.
+Complex is better than complicated.
+Readability counts.
+Rather than having all of its functionality built into its core, Python was designed to be highly extensible. This compact modularity has made it particularly popular as a means of adding programmable interfaces to existing applications. Van Rossum's vision of a small core language with a large standard library and easily extensible interpreter stemmed from his frustrations with ABC, which espoused the opposite approach.[35]
+
+Python strives for a simpler, less-cluttered syntax and grammar while giving developers a choice in their coding methodology. In contrast to Perl's "there is more than one way to do it" motto, Python embraces a "there should be one—and preferably only one—obvious way to do it" design philosophy.[57] Alex Martelli, a Fellow at the Python Software Foundation and Python book author, writes that "To describe something as 'clever' is not considered a compliment in the Python culture."[58]
+
+Python's developers strive to avoid premature optimization, and reject patches to non-critical parts of the CPython reference implementation that would offer marginal increases in speed at the cost of clarity.[59] When speed is important, a Python programmer can move time-critical functions to extension modules written in languages such as C, or use PyPy, a just-in-time compiler. Cython is also available, which translates a Python script into C and makes direct C-level API calls into the Python interpreter.
+
+An important goal of Python's developers is keeping it fun to use. This is reflected in the language's name—a tribute to the British comedy group Monty Python[60]—and in occasionally playful approaches to tutorials and reference materials, such as examples that refer to spam and eggs (from a famous Monty Python sketch) instead of the standard foo and bar.[61][62]
+
+A common neologism in the Python community is pythonic, which can have a wide range of meanings related to program style. To say that code is pythonic is to say that it uses Python idioms well, that it is natural or shows fluency in the language, that it conforms with Python's minimalist philosophy and emphasis on readability. In contrast, code that is difficult to understand or reads like a rough transcription from another programming language is called unpythonic.
+
+Users and admirers of Python, especially those considered knowledgeable or experienced, are often referred to as Pythonistas.
+
+<> 2020-07-14T101824.200.json
+
+###
+
+POST https://app.quillionz.com:8243/token
+Content-Type: application/x-www-form-urlencoded
+Authorization: Basic THdETDh4QXV0TjJyNzhoek9FZ3dTN0pYSFpVYTpLYjN6bEhqNktDNWRzcFF6cld4VlRkeFU3RHNh
+
+grant_type=client_credentials
+
+<> 2020-07-14T101800.200.json
+
+###
+
 POST http://localhost:33090/level-up/v1/createquiz
 Content-Type: application/json
 
@@ -825,42 +894,6 @@ GET http://localhost:33090/level-up/v1/quizzes?quizType=1
 Content-Type: application/json
 
 <> 2020-06-24T010115.200.json
-
-###
-
-POST http://localhost:33090/usersQuiz/333
-Content-Type: application/json
-
-{
-  "quizId": "81",
-  "userID": 123456,
-  "answers": [
-    {
-      "questionId": 811,
-      "timePassedToAnswer": 5,
-      "wasAnsweredCorrectly": true
-    },
-    {
-      "questionId": 812,
-      "timePassedToAnswer": 1,
-      "wasAnsweredCorrectly": false
-    },
-    {
-      "questionId": 813,
-      "timePassedToAnswer": 15,
-      "wasAnsweredCorrectly": true
-    },
-  ]
-}
-
-<> 2020-06-24T010101.404.json
-
-###
-
-GET http://localhost:33090/level-up/v1/users/123456
-Content-Type: application/json
-
-<> 2020-06-24T115839.200.json
 
 ###
 
